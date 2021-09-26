@@ -7,7 +7,7 @@ import time
 
 WIDTH = 800
 HEIGHT = 600
-TOTAL_CITIES = 10
+TOTAL_CITIES = 11
 BORDER_PERCENT = 5 # percent of border in which cities will not appear
 
 def swap(array, i, j):
@@ -51,7 +51,7 @@ def find_shortest_path(shared_val, key, cities, thread_num, num_threads):
 		if distance < best_distance:
 			best_distance = distance
 			shared_val[key] = cities_in_permutation.copy()
-			print(key, "found best distance of", distance)
+			print(key + "\tfound best distance of", round(distance), "px")
 
 	print(key, "finished")
 

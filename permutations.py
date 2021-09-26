@@ -1,7 +1,6 @@
 """ https://www.quora.com/How-would-you-explain-an-algorithm-that-generates-permutations-using-lexicographic-ordering """
 
 
-
 def get_permutations(number):
 	vals = list(range(number))
 	running = True
@@ -35,8 +34,7 @@ def get_permutations(number):
 
 
 if __name__ == '__main__':
-	perms = get_permutations(4)
-	perms = list(perms)
-	perms[:len(perms) //2 ]
+	import math
+	perms = get_permutations(5)
 	for perm in perms:
 		print(perm)

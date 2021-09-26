@@ -7,7 +7,7 @@ import time
 
 WIDTH = 800
 HEIGHT = 600
-TOTAL_CITIES = 7
+TOTAL_CITIES = 10
 BORDER_PERCENT = 5 # percent of border in which cities will not appear
 
 def swap(array, i, j):
@@ -31,15 +31,15 @@ def draw_path(screen, cities, color=(100,100,100), size=5):
 		)
 
 def main():
-	cities = []
 	border_width = round(WIDTH * BORDER_PERCENT / 100)
 	border_height = round(HEIGHT * BORDER_PERCENT / 100)
-	for i in range(TOTAL_CITIES):
-		v = pygame.math.Vector2(
+
+	cities = [
+		pygame.math.Vector2(
 			x=random.randint(border_width, WIDTH - border_width),
 			y=random.randint(border_height, HEIGHT - border_height)
-		)
-		cities.append(v)
+		) for i in range(TOTAL_CITIES)
+	]
 
 	record_distance = calc_distance(cities)
 	record_order = cities.copy()
