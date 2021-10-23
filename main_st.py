@@ -8,17 +8,7 @@ import time
 WIDTH = 800
 HEIGHT = 600
 TOTAL_CITIES = 10
-BORDER_PERCENT = 5  # percent of border in which cities will not appear
-
-
-def feature():
-    # This is just code for a new feature that I am testing
-    pass
-
-
-def featureAux():
-    # This is just code for a new feature that I am testing
-    pass
+BORDER_PERCENT = 5  # percent of border in which cities will not appears
 
 
 def swap(array, i, j):
